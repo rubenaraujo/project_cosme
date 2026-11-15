@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cosme · Benfica</title>
+<meta name="description" content="Notícias, jogos, resultados e classificação do Benfica, num só sítio.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Sora:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#news">Saltar para as notícias</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Cosme">
+      <img src="/logo.png" alt="">
+      <span>Cosme</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" data-enter>
+    <div class="next" id="next"></div>
+    <div class="standing" id="standing"></div>
+  </section>
+
+  <div class="wrap grid">
+    <section aria-labelledby="h-news">
+      <h2 class="sr" id="h-news">Notícias e opinião</h2>
+      <div class="tabs main-tabs" role="tablist" aria-label="Secção">
+        <button type="button" role="tab" class="on" data-main="news" aria-selected="true">Notícias</button>
+        <button type="button" role="tab" data-main="videos" aria-selected="false">Opinião</button>
+        <button type="button" role="tab" data-main="podcasts" aria-selected="false">Podcasts</button>
+        <button type="button" role="tab" data-main="market" aria-selected="false">Mercado</button>
+      </div>
+      <div id="news" class="news">
+        <div class="sk sk-hero"></div><div class="sk sk-card"></div><div class="sk sk-card"></div>
+      </div>
+      <button id="more" class="btn more" hidden>Carregar mais notícias</button>
+      <div id="videos" class="videos" hidden></div>
+      <div id="podcasts" class="podcasts" hidden></div>
+      <div id="market" class="news" hidden></div>
+    </section>
+
+    <aside>
+      <div id="covers" class="covers" aria-label="Capas de hoje"></div>
+      <div class="tabs" id="pane-tabs" role="tablist" aria-label="Jogos">
+        <button type="button" role="tab" class="on" data-pane="results" aria-selected="true">Resultados</button>
+        <button type="button" role="tab" data-pane="fixtures" aria-selected="false">Calendário</button>
+      </div>
+      <div id="results" class="card list pane"><div class="sk sk-list"></div></div>
+      <div id="fixtures" class="card list pane" hidden></div>
+      <h2>Marcadores</h2>
+      <div id="scorers" class="card"><div class="sk sk-list"></div></div>
+      <h2>Classificação</h2>
+      <div class="tabs" id="table-tabs" role="tablist" aria-label="Competição">
+        <button type="button" role="tab" class="on" data-league="por.1" aria-selected="true">Liga</button>
+        <button type="button" role="tab" data-league="uefa.europa" aria-selected="false">Liga Europa</button>
+      </div>
+      <div id="table" class="card"><div class="sk sk-list"></div></div>
+    </aside>
+  </div>
+
+</main>
+
+<dialog id="reader" class="reader" aria-label="Leitor">
+  <button class="lb-close" id="rd-close" type="button" aria-label="Fechar">×</button>
+  <div id="rd-body"></div>
+</dialog>
+
+<dialog id="match" class="match" aria-label="Detalhe do jogo">
+  <button class="lb-close" id="md-close" type="button" aria-label="Fechar">×</button>
+  <div id="md-body"></div>
+</dialog>
+
+<dialog id="lightbox" class="lightbox" aria-label="Capa do jornal">
+  <button class="lb-close" id="lb-close" type="button" aria-label="Fechar">×</button>
+  <button class="lb-nav prev" id="lb-prev" type="button" aria-label="Capa anterior">‹</button>
+  <img id="lb-img" alt="">
+  <button class="lb-nav next" id="lb-next" type="button" aria-label="Capa seguinte">›</button>
+  <a class="lb-open" id="lb-open" target="_blank" rel="noopener">Abrir no jornal</a>
+</dialog>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="/" aria-label="Cosme"><img src="/logo.png" alt=""><span>Cosme</span></a>
+    <p class="foot-src">Notícias: Record, O Jogo e A Bola · Jogos e classificação: ESPN</p>
+    <p class="credit">Developed by Ruben Araujo</p>
+  </div>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>
